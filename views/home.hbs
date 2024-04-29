@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="pt-5 pb-2">
+        <h1>Students </h1>
+        <div class="d-flex flex-row-reverse">
+            <a href="/create-student" class="btn btn-success">Create Student</a>
+        </div>
+    </div>
+    <table class="table table-dark table-hover">
+
+
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Mobile no</th>
+                <th scope="col">Email</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each students}}
+
+            <tr>
+                <th scope="row">{{@index}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.mobileNo}}</td>
+                <td>{{this.email}}</td>
+                <td>
+                    <a href="/update-student/{{this._id}}/{{this.name}}/{{this.mobileNo}}/{{this.email}}" class="btn btn-primary">Update</a>
+                    <a href="/delete-student/{{this._id}}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
