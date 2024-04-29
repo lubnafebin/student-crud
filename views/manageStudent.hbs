@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="pt-5 pb-2">
+        <div class="d-flex justify-content-center">
+
+            <form class="col g-3" action={{action}} method="post">
+                <h1>{{form}} Student</h1>
+                <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" name="email" value={{student.email}}>
+                </div>
+                <div class="col-md-12">
+                    <label for="inputname4" class="form-label">Student Name</label>
+                    <input type="text" class="form-control" id="inputName" name="name" value={{student.name}}>
+                </div>
+                <div class="col-md-12">
+                    <label for="inputMobile" class="form-label">Mobile no</label>
+                    <input type="tel" class="form-control" id="inputMobile" name="mobileNo" value={{student.mobileNo}}>
+                </div>
+                <div class="col-12 pt-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
